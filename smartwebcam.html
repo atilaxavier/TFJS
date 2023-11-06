@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiple object detection using pre trained model in TensorFlow.js</title>
+    <meta charset="utf-8">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="smartwebcam.css">
+  </head>  
+  <body>
+    <h1>Detecção de multiplos objetos usando modelos pre-treinados no TensorFlow.js</h1>
+
+    <p>Espere o modelo ser carregado para poder clicar no botão que habilita a camera. Segure seu celular na horizontal (modo paisagem).</p>
+    
+    <section id="demos" class="invisible">
+
+      <p>Aproxime objetos da camera para ver classificações em tempo real! Quando estiver pronto click "Ativar Camera" abaixo e aceite o acesso à webcam quando o browser pedir (verifique o canto superior esquerdo)</p>
+      
+      <div id="liveView" class="camView">
+        <button id="webcamButton">Ativa Camera</button>
+        <video id="webcam" autoplay muted width="640" height="480"></video>
+      </div>
+    </section>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="smartwebcam.js" defer></script>
+  </body>
+</html>

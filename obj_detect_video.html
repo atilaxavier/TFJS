@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load the coco-ssd model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  </head>
+  <body>
+    <div id="console"></div>
+    <div style="text-align:center">
+        <h1>Atila - Tensorflow.js Real Time Object Detection</h1>
+        <div><p>Status: <b> <span class="statusApp">Inicio</span> </b> </p></div>
+        <div><p>Resolucao da sua camera: <b> <span class="resolutionInfo">N/A</span> </b> </p></div>
+        <!-- <video autoplay playsinline muted id="webcam" width="300" height="300"></video>  -->
+        <video autoplay playsinline muted hidden id="webcam"></video> 
+        <!-- <video hidden id="vid" width="300" height="300"></video>    -->    
+        <canvas id="canvas"></canvas>
+        <!-- Load index.js after the content of the page -->
+        <script src="obj_detect_video.js"></script>
+        
+    </div>
+  </body>
+</html>
