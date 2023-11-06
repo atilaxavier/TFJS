@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+    <div id="console"></div>
+    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>   
+    <p>
+    <button id="class-a">Add A</button>
+    <button id="class-b">Add B</button>
+    <button id="class-c">Add C</button>
+    </p>
+    <button id="load">Carrega Modelo</button>
+    <p><button id="save">Grava Modelo</button></p>
+    <p><button id="clear">Apaga Modelo</button></p>
+    <!-- Load index.js after the content of the page -->
+    <script src="knn_classifier.js"></script>
+  </body>
+</html>

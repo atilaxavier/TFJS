@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Testes Android Intents</title>
+    <meta charset="utf-8">
+  </head>  
+  <body>
+    <h1>Testes Android Intents para abrir apps.</h1>
+    <h2>Usando URIs padrão<h2>
+    <p><a href="sms:021999747208;?&body=SMS de teste">Envia SMS com texto predefinido</a></p>
+    <p><a href="mms:021999747208;?&body=MMS de teste">Envia MMS com texto predefinido</a></p>    
+    <p><a href="tel:021999747208">Disca um numero</a></p>
+    <p><a href="geo:0,0">Show map</a></p>
+    <p><a href="vnd.youtube:video_id">Play YouTube video</a></p>
+    <p><a href="market://details?id=br.com.timbrasil.meutim">Open app in Play Store</a></p>
+    <p><a href="lpa:1$rsp-1011.oberthur.net$2X02P-4A6V7-TE311-NDY4H">Baixa eSIM com LPA</a></p>
+
+    <h2>Usando URIs com Intents</h2>
+    <h3>Estrutura - intent://ANDROID_HOST/#Intent;scheme=ANDROID_SCHEME;package=APP_PACKAGE;end</h3>
+    <p><a href="intent://chromecast.com/#Intent;scheme=comgooglecast;package=com.google.android.apps.chromecast.app;end">Google Home app</a></p>
+    <!--eSIM LPA Samsung Manifest (EsimClient)
+      android:scheme pega do AndroidManifest na linha tipo <data android:host="sharesheet" android:scheme="googlehome"
+      android:host pega dentro do tag <activity> ou <activity-alias> que seja parent do <intent-filter>, junto com o android:scheme
+      android:name ou Application ID que pode ser obtido no Google Play ou package
+      Google Calendar:
+      scheme="content"
+      host=com.android.calendar
+      package=com.android.calendar.AllInOneActivity
+
+      Mensagens
+      scheme="Mensagens"
+      host=com.google.android.apps.messaging.home
+      package=com.google.android.apps.messaging
+
+      EsimClient
+      scheme="EsimClient"
+      host=android.intent.action.MAIN
+      Package = com.samsung.android.app.telephonyui.esimclient  .OdaWebViewActivity
+
+    -->    
+    <p><a href="intent://com.google.android.apps.messaging.main/#Intent;scheme=Mensagens;package=com.google.android.apps.messaging;end">Abre Mensagens2</a></p>
+    <p><a href="intent://com.android.calendar/#Intent;scheme=content;package=com.android.calendar.AllInOneActivity;end">Abre Google Calendar</a></p>
+    <p><a href="intent://com.google.android.maps/#Intent;scheme=Maps;package=com.google.android.apps.maps;data=geo:0,0;end">Abre Google Maps</a></p>
+    <p><a href="intent://settings/#Intent;action=android.intent.action.MAIN;category=android.intent.category.DEFAULT;package=com.android.settings.sim;end">Abre LPA eSIM</a></p>
+    <p><a href="intent://com.samsung.android.app.telephonyui.esimclient.OdaWebViewActivity:#Intent;scheme=ESimClient;package=com.samsung.android.app.telephonyui.esimclient;end">Abre LPA eSIM Samsung</a></p>
+    
+    <h1>The Window Navigator Object</h1>
+        <h2>All Properties</h2>
+
+        <div id="demo"></div>
+
+        <script>
+        let text = "<p>Browser CodeName: " + navigator.appCodeName + "</p>" +
+        "<p>Browser Name: " + navigator.appName + "</p>" +
+        "<p>Browser Version: " + navigator.appVersion + "</p>" +
+        "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>" +
+        "<p>Browser Language: " + navigator.language + "</p>" +
+        "<p>Browser Online: " + navigator.onLine + "</p>" +
+        "<p>Platform: " + navigator.platform + "</p>" +
+        "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+        document.getElementById("demo").innerHTML = text;
+        </script>
+  <script src="/f5e35d6cd333dabbb945e7251c5a1dc54a0029fd9b7259bfc8cdd0313a05c0a3/ns.js"></script></body>
+</html>
